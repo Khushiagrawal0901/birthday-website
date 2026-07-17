@@ -201,6 +201,11 @@
 </head>
 <body>
 
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- Layer 1: Aurora Background -->
     <div class="aurora-bg"></div>
 
@@ -219,9 +224,10 @@
         <div class="step-container flex-col items-center text-center max-w-lg glass-card rounded-[2rem] p-8 md:p-12 z-10 active" id="step-1" style="display: flex; opacity: 1; transform: translate(-50%, -50%) scale(1);">
             <div class="step-content flex flex-col items-center">
                 <div class="text-7xl mb-6 heart-beat select-none">❤️</div>
-                <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-gradient">Hey Beautiful,</h1>
-                <p class="text-gray-300 text-base md:text-lg mb-10 leading-relaxed font-light">I built a little world for you, just to bring a smile to your face on your special day.</p>
-                <button class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg" onclick="nextStep(2)">Let's Begin</button>
+                <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-gradient">Hey Kuchuuu Puchuuu ❤️</h1>
+                <p class="text-gray-300 text-base md:text-lg mb-10 leading-relaxed font-light">Someone has a surprise waiting for you...
+Tap below and let's celebrate your special day together.</p>
+                <button class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg" onclick="nextStep(2)">Open My Surprise</button>
             </div>
         </div>
 
@@ -229,29 +235,32 @@
         <div class="step-container flex-col items-center text-center max-w-lg glass-card rounded-[2rem] p-8 md:p-12 z-10" id="step-2">
             <div class="step-content flex flex-col items-center">
                 <div class="text-7xl mb-6 float-emoji select-none">🎉</div>
-                <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-gradient">Happy Birthday!</h1>
-                <p class="text-gray-300 text-base md:text-lg mb-10 leading-relaxed font-light">Another year of you making the world brighter. Your existence is a gift, and I'm so lucky to witness it.</p>
-                <button class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg" onclick="nextStep(3)">There's more...</button>
+                <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-gradient">Happy Birthday,
+My Kuchuuu Puchuuu ❤️</h1>
+                <p class="text-gray-300 text-base md:text-lg mb-10 leading-relaxed font-light">Today is all about the most amazing person in my life.
+Thank you for making my world brighter every single day.</p>
+                <button class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg" onclick="nextStep(3)">Continue ❤️</button>
             </div>
         </div>
 
         <!-- STEP 3: The Reasons Why (Bento Grid) -->
         <div class="step-container flex-col items-center text-center max-w-2xl glass-card rounded-[2rem] p-8 md:p-12 z-10" id="step-3">
             <div class="step-content flex flex-col items-center w-full">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8 text-gradient">A Few Things I Adore About You</h2>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8 text-gradient">Why You're So Special To Me ❤️</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-10 text-left">
                     <div class="md:col-span-2 bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/5 hover:border-pink-500/50 hover:bg-white/5 transition-all duration-300 group">
-                        <h3 class="font-serif text-xl text-pink-200 mb-2 group-hover:text-pink-100 transition-colors">✨ Your Unmatched Kindness</h3>
-                        <p class="text-gray-400 text-sm md:text-base font-light">The genuine warmth you show to everyone is something truly rare and beautiful.</p>
+                        <h3 class="font-serif text-xl text-pink-200 mb-2 group-hover:text-pink-100 transition-colors">😊 Your Smile</h3>
+                        <p class="text-gray-400 text-sm md:text-base font-light">Your smile can brighten even my darkest day.</p>
                     </div>
                     <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/5 hover:border-pink-500/50 hover:bg-white/5 transition-all duration-300 group">
-                        <h3 class="font-serif text-xl text-pink-200 mb-2 group-hover:text-pink-100 transition-colors">😊 That Smile</h3>
-                        <p class="text-gray-400 text-sm md:text-base font-light">It's a literal work of art.</p>
+                        <h3 class="font-serif text-xl text-pink-200 mb-2 group-hover:text-pink-100 transition-colors">🤍 Your Caring Heart</h3>
+                        <p class="text-gray-400 text-sm md:text-base font-light">Your kindness is one of the many reasons I admire you.</p>
                     </div>
                     <div class="md:col-span-2 bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/5 hover:border-pink-500/50 hover:bg-white/5 transition-all duration-300 group">
-                        <h3 class="font-serif text-xl text-pink-200 mb-2 group-hover:text-pink-100 transition-colors">🌟 Your Radiant Spirit</h3>
-                        <p class="text-gray-400 text-sm md:text-base font-light">Your passion for life is infectious. Being around you makes everything feel more exciting and possible.</p>
+                        <h3 class="font-serif text-xl text-pink-200 mb-2 group-hover:text-pink-100 transition-colors">🌸 Being You</h3>
+                        <p class="text-gray-400 text-sm md:text-base font-light">You don't have to be perfect.
+Being you is more than enough.</p>
                     </div>
                 </div>
 
@@ -259,33 +268,190 @@
             </div>
         </div>
 
-        <!-- STEP 4: The Shared Memory -->
-        <div class="step-container flex-col items-center text-center max-w-xl glass-card rounded-[2rem] p-8 md:p-12 z-10" id="step-4">
-            <div class="step-content flex flex-col items-center w-full">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10 text-gradient">That One Time...</h2>
+     <!-- STEP 4: The Shared Memory -->
+<div class="step-container flex-col items-center text-center max-w-xl glass-card rounded-[2rem] p-8 md:p-12 z-10" id="step-4">
+    <div class="step-content flex flex-col items-center w-full">
 
-                <div class="polaroid-wrapper mb-10 cursor-pointer" id="polaroid-wrapper">
-                    <div class="polaroid mx-auto transform rotate-2 w-56 md:w-64 rounded-sm">
-                        <img src="https://i.ibb.co/6Z6XgCg/crush.webp" alt="Our favorite memory" class="w-full h-auto border border-gray-200 block shadow-inner">
-                        <p class="text-gray-800 font-serif italic text-lg mt-4 pointer-events-none tracking-wide text-center">Our favorite memory.</p>
-                    </div>
-                </div>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10 text-gradient">
+            Our Beautiful Memory ❤️
+        </h2>
 
-                <p class="text-gray-300 text-base md:text-lg mb-10 leading-relaxed font-light">Every moment with you feels like a scene from a movie I'd watch on repeat.</p>
-                <button class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg" onclick="nextStep(5)">One last thing...</button>
+        <!-- Main Polaroid -->
+        <div class="polaroid-wrapper mb-10 cursor-pointer" id="polaroid-wrapper">
+            <div class="polaroid mx-auto transform rotate-2 w-56 md:w-64 rounded-sm">
+
+                <img src="abc.jpeg"
+                     alt="Our Favorite Memory"
+                     class="w-full h-auto border border-gray-200 block shadow-inner">
+
+                <p class="text-gray-800 font-serif italic text-lg mt-4 text-center">
+                    My favorite smile, my favorite person ❤️
+                </p>
+
             </div>
         </div>
 
-        <!-- STEP 5: The Birthday Wish & Finale -->
-        <div class="step-container flex-col items-center text-center max-w-lg glass-card rounded-[2rem] p-8 md:p-12 z-10" id="step-5">
+        <p class="text-gray-300 text-base md:text-lg mb-6 leading-relaxed font-light">
+            Every picture tells a story, but this one tells my favorite. ❤️
+        </p>
+
+        <!-- Gallery -->
+        <h3 class="text-pink-300 text-xl font-semibold mb-4">
+            Our Beautiful Memories 📸
+        </h3>
+
+        <div class="grid grid-cols-2 gap-4 mb-8 w-full">
+
+            <img src="abc.jpeg"
+                 class="rounded-xl shadow-lg hover:scale-105 duration-300">
+
+            <img src="abc.jpeg"
+                 class="rounded-xl shadow-lg hover:scale-105 duration-300">
+
+            <img src="abc.jpeg"
+                 class="rounded-xl shadow-lg hover:scale-105 duration-300">
+
+            <img src="abc.jpeg"
+                 class="rounded-xl shadow-lg hover:scale-105 duration-300">
+
+        </div>
+
+        <button class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg"
+                onclick="nextStep(5)">
+            One More Surprise ❤️
+        </button>
+
+    </div>
+</div>
+        <!-- STEP 5: Little Things I Love -->
+<div class="step-container flex-col items-center text-center max-w-2xl glass-card rounded-[2rem] p-8 md:p-12 z-10" id="step-5">
+
+    <div class="step-content flex flex-col items-center w-full">
+
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8 text-gradient">
+            Little Things I Love About You ❤️
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-10">
+
+            <div class="bg-black/40 backdrop-blur-md p-5 rounded-2xl border border-pink-500/20 hover:scale-105 transition duration-300">
+                ❤️ You're my comfort.
+            </div>
+
+            <div class="bg-black/40 backdrop-blur-md p-5 rounded-2xl border border-pink-500/20 hover:scale-105 transition duration-300">
+                🌸 You're my happiness.
+            </div>
+
+            <div class="bg-black/40 backdrop-blur-md p-5 rounded-2xl border border-pink-500/20 hover:scale-105 transition duration-300">
+                ☀️ You're my safe place.
+            </div>
+
+            <div class="bg-black/40 backdrop-blur-md p-5 rounded-2xl border border-pink-500/20 hover:scale-105 transition duration-300">
+                📱 You're my favorite notification.
+            </div>
+
+            <div class="bg-black/40 backdrop-blur-md p-5 rounded-2xl border border-pink-500/20 hover:scale-105 transition duration-300">
+                🌎 You're my biggest blessing.
+            </div>
+
+            <div class="bg-black/40 backdrop-blur-md p-5 rounded-2xl border border-pink-500/20 hover:scale-105 transition duration-300">
+                ❤️ You're my Kuchuuu Puchuuu.
+            </div>
+
+        </div>
+
+        <button class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg"
+            onclick="nextStep(6)">
+            One More Surprise ❤️
+        </button>
+
+    </div>
+
+</div>
+<!-- STEP 6: Love Letter -->
+<div class="step-container flex-col items-center text-center max-w-xl glass-card rounded-[2rem] p-8 md:p-12 z-10" id="step-6">
+
+    <div class="step-content flex flex-col items-center w-full">
+
+        <div class="text-7xl mb-6">💌</div>
+
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6 text-gradient">
+            A Little Letter For You
+        </h2>
+
+        <div class="bg-black/30 rounded-2xl p-6 text-left leading-8 text-gray-300 max-h-96 overflow-y-auto">
+
+            Dear Kuchuuu Puchuuu ❤️,
+
+            <br><br>
+
+            Happy Birthday to the most precious person in my life.
+
+            <br><br>
+
+            I hope today fills your heart with as much happiness as you bring into mine.
+
+            <br><br>
+
+            Thank you for your smile, your kindness, your love, and every little moment we've shared together.
+
+            <br><br>
+
+            I feel incredibly lucky to have someone as wonderful as you.
+
+            <br><br>
+
+            May every dream you have come true, and may this year be filled with endless laughter, success, love, and beautiful memories.
+
+            <br><br>
+
+            Always remember...
+
+            <br><br>
+
+            No matter what happens,
+
+            I'll always be cheering for you,
+
+            smiling because of you,
+
+            and praying for your happiness.
+
+            <br><br>
+
+            Happy Birthday once again,
+
+            My Kuchuuu Puchuuu ❤️
+
+            <br><br>
+
+            With lots of love,
+
+            <br>
+
+            ❤️ Your Paglu ❤️
+
+        </div>
+
+        <button class="btn-primary rounded-full px-10 py-3.5 mt-8 text-white font-bold tracking-wide text-lg"
+            onclick="nextStep(7)">
+            Celebrate 🎂
+        </button>
+
+    </div>
+
+</div>
+
+        <!-- final STEP : The Birthday Wish & Finale -->
+        <div class="step-container flex-col items-center text-center max-w-lg glass-card rounded-[2rem] p-8 md:p-12 z-10" id="step-7">
             <div class="step-content flex flex-col items-center w-full relative">
                 <div class="text-7xl mb-6 float-emoji select-none">🎂</div>
                 <h1 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-gradient">My Wish For You</h1>
                 <p class="text-gray-300 text-base md:text-lg mb-8 leading-relaxed font-light">May the next year bring you all the love, success, and pure happiness you so rightfully deserve. May your dreams soar higher than ever.</p>
                 
                 <div class="h-16 flex items-center justify-center w-full mb-6">
-                    <button id="btn-celebrate" class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg absolute" onclick="triggerFinale()">Celebrate!</button>
-                    <p id="final-message" class="font-serif text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-400 opacity-0 hidden absolute w-full text-center drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">Happy Birthday, my crush! ❤️</p>
+                    <button id="btn-celebrate" class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg absolute" onclick="triggerFinale()">Blow the candles  🎂</button>
+                    <p id="final-message" class="font-serif text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-400 opacity-0 hidden absolute w-full text-center drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">Happy Birthday, Kuchuuuu Puchuuuu ❤️</p>
                 </div>
             </div>
         </div>
@@ -446,7 +612,7 @@
 
         /* --- UI & Transitions Logic --- */
         let currentStep = 1;
-        const totalSteps = 5;
+        const totalSteps = 7;
 
         // Initialize Progress Bar
         function updateProgress() {
@@ -622,7 +788,12 @@
 
             }, 250);
         }
+        // Background Music
+const music = document.getElementById("bgMusic");
 
+document.body.addEventListener("click", function () {
+    music.play().catch(() => {});
+}, { once: true });
         // Run setup
         updateProgress();
 
