@@ -197,6 +197,54 @@
             user-select: none;
             filter: sepia(0.1) contrast(1.1);
         }
+        #stars{
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    pointer-events:none;
+    background-image:
+      radial-gradient(white 1px, transparent 1px),
+      radial-gradient(#ffd7ef 1px, transparent 1px),
+      radial-gradient(#ffffff 1px, transparent 1px);
+
+    background-size:80px 80px,120px 120px,160px 160px;
+
+    animation:twinkle 6s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.15;
+}
+
+100%{
+opacity:.6;
+}
+
+}
+
+/* Falling Rose Petals */
+.petal {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    pointer-events: none;
+    z-index: 9998;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
     </style>
 </head>
 <body>
@@ -236,7 +284,7 @@ Tap below and let's celebrate your special day together.</p>
             <div class="step-content flex flex-col items-center">
                 <div class="text-7xl mb-6 float-emoji select-none">🎉</div>
                 <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-gradient">Happy Birthday,
-My Kuchuuu Puchuuu❤️</h1>
+My Kuchuuu Puchuuu ❤️</h1>
                 <p class="text-gray-300 text-base md:text-lg mb-10 leading-relaxed font-light">Today is all about the most amazing person in my life.
 Thank you for making my world brighter every single day.</p>
                 <button class="btn-primary rounded-full px-10 py-3.5 text-white font-bold tracking-wide text-lg" onclick="nextStep(3)">Continue ❤️</button>
@@ -797,6 +845,73 @@ document.body.addEventListener("click", function () {
         // Run setup
         updateProgress();
 
+        const musicToggle = document.getElementById("musicToggle");
+
+musicToggle.addEventListener("click", () => {
+    if (music.paused) {
+        music.play();
+        musicToggle.innerHTML = "🔊";
+    } else {
+        music.pause();
+        musicToggle.innerHTML = "🔇";
+    }
+});
+
+document.addEventListener("mousemove",(e)=>{
+
+const heart=document.createElement("div");
+
+heart.innerHTML="💖";
+
+heart.style.position="fixed";
+
+heart.style.left=e.clientX+"px";
+
+heart.style.top=e.clientY+"px";
+
+heart.style.pointerEvents="none";
+
+heart.style.fontSize="18px";
+
+heart.style.zIndex="9999";
+
+document.body.appendChild(heart);
+
+gsap.to(heart,{
+y:-40,
+opacity:0,
+scale:0,
+duration:1,
+onComplete:()=>heart.remove()
+});
+
+});
+
+// 🌹 Falling Rose Petals
+function createPetal() {
+    const petal = document.createElement("div");
+
+    petal.className = "petal";
+    petal.innerHTML = "🌹";
+
+    petal.style.left = Math.random() * window.innerWidth + "px";
+    petal.style.animationDuration = (4 + Math.random() * 4) + "s";
+    petal.style.fontSize = (20 + Math.random() * 15) + "px";
+
+    document.body.appendChild(petal);
+
+    petal.addEventListener("animationend", () => {
+        petal.remove();
+    });
+}
+
+// Create one petal every 800 ms
+setInterval(createPetal, 800);
     </script>
+    <!-- Music Toggle Button -->
+<button id="musicToggle"
+    class="fixed top-6 right-6 z-50 bg-pink-600 hover:bg-pink-500 text-white rounded-full w-14 h-14 shadow-lg text-2xl transition-all duration-300">
+    🔊
+</button>
 </body>
 </html>
